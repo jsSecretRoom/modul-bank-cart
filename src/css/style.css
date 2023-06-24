@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "KeaniaOne";
+  src: url(../fonts/KeaniaOne-Regular.ttf);
+}
+body {
+  background: url("../img/background.svg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+body .decorativ-list {
+  width: 820px;
+  height: auto;
+}
+body .decorativ-list .conteinr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 10px 0;
+  background-color: rgb(67, 64, 64);
+}
+body .decorativ-list .conteinr header {
+  width: 100vw;
+  background-color: rgb(231, 123, 21);
+  border-radius: 0;
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+body .decorativ-list .conteinr header .back-reverse {
+  background: none;
+  display: none;
+}
+body .decorativ-list .conteinr header .back-reverse img {
+  width: 40px;
+  height: 40px;
+}
+body .decorativ-list .conteinr header .back-reverse.show {
+  display: block;
+}
+body .decorativ-list .conteinr header p {
+  text-align: center;
+  padding: 20px 0;
+  font-family: "KeaniaOne";
+  color: white;
+  font-size: 24px;
+}
+@media (min-width: 425px) {
+  body .decorativ-list .conteinr header {
+    justify-content: space-around;
+  }
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr header {
+    width: 800px;
+    border-radius: 10px;
+  }
+  body .decorativ-list .conteinr header p {
+    color: white;
+    font-size: 32px;
+  }
+}
+body .decorativ-list .conteinr main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 10px;
+}
+body .decorativ-list .conteinr main form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 10px;
+}
+body .decorativ-list .conteinr main form .block-credit {
+  width: 100vi;
+  height: 60vi;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr main form .block-credit {
+    width: 800px;
+    height: 470px;
+  }
+}
+body .decorativ-list .conteinr main form .block-credit .flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back {
+  border-radius: 10px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 {
+  border-radius: 10px;
+  margin: 2%;
+  font-family: "KeaniaOne";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 0 0 0;
+  height: 27.5vi;
+  width: 48vi;
+  transition: transform 0.3s;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4:hover {
+  transform: perspective(800px) rotateY(-10deg);
+  border: 3px solid rgb(2, 72, 222);
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3:hover, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4:hover {
+  transform: perspective(800px) rotateY(10deg);
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .price-naim, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .price-naim {
+  font-size: 18px;
+  top: 3%;
+  right: 4%;
+  position: absolute;
+  color: white;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers {
+  height: 100%;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .first {
+  font-size: 18vi;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .second {
+  font-size: 10vi;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .therd {
+  font-size: 7vi;
+  color: gold;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 {
+    height: auto;
+    width: auto;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers {
+    height: 100%;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .first, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .first {
+    font-size: 120px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .second, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .second {
+    font-size: 68px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 .numbers .therd, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 .numbers .therd {
+    font-size: 36px;
+  }
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price1, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price1 {
+  background: url("../img/priceimg1.jpg") 0 0/cover no-repeat;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price2, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price2 {
+  background: url("../img/priceimg2.jpg") 0 0/cover no-repeat;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price3, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price3 {
+  background: url("../img/priceimg3.jpg") 0 0/cover no-repeat;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front .price4, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .price4 {
+  background: url("../img/priceimg4.jpg") 0 0/cover no-repeat;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-front {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(231, 123, 21);
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back {
+  transform: rotateY(180deg);
+  background-color: rgb(114, 192, 231);
+  background: url("../img/BANKcard.svg") 0 0/cover no-repeat;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form {
+  height: 100%;
+  width: 100%;
+  position: inherit;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number {
+  bottom: 30vi;
+  left: 4vi;
+  width: 70vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart {
+  bottom: 18vi;
+  left: 4vi;
+  width: 48vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod {
+  bottom: 18vi;
+  left: 54vi;
+  width: 20vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
+  bottom: 6vi;
+  left: 4vi;
+  width: 70vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
+  position: absolute;
+  height: 10vi;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 4vi;
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number {
+    bottom: 250px;
+    left: 34px;
+    width: 550px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart {
+    bottom: 150px;
+    left: 34px;
+    width: 370px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod {
+    bottom: 150px;
+    left: 420px;
+    width: 160px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
+    bottom: 50px;
+    left: 34px;
+    width: 550px;
+  }
+  body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
+    height: 80px;
+    font-size: 34px;
+    border-radius: 10px;
+  }
+}
+body .decorativ-list .conteinr main form .block-credit.flipped .flipper {
+  transform: rotateY(180deg);
+}
+body .decorativ-list .conteinr main form .next-form {
+  width: 100vw;
+  height: auto;
+  padding: 10px 0;
+  background-color: rgb(231, 123, 21);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .decorativ-list .conteinr main form .next-form .form-conteiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+body .decorativ-list .conteinr main form .next-form .form-conteiner input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 24px;
+}
+body .decorativ-list .conteinr main form .next-form .form-conteiner #submit-button {
+  height: 60px;
+  background-color: chartreuse;
+  font-family: "KeaniaOne";
+  font-size: 32px;
+}
+body .decorativ-list .conteinr main form .next-form .form-conteiner #submit-button:hover {
+  background-color: rgb(0, 255, 149);
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr main form .next-form {
+    width: 800px;
+  }
+}
+body .decorativ-list .conteinr footer {
+  width: 100vw;
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr footer {
+    width: 800px;
+  }
+}
+body .decorativ-list .conteinr footer .info-block {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid red;
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(231, 123, 21);
+}
+body .decorativ-list .conteinr footer .info-block p {
+  font-family: "KeaniaOne";
+  font-size: 32px;
+}
+body .decorativ-list .conteinr footer .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(23, 70, 255);
+  border-radius: 0 0 10px 10px;
+}
+body .decorativ-list .conteinr footer .links a img {
+  height: 60px;
+}

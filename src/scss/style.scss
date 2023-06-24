@@ -1,0 +1,318 @@
+@font-face{
+    font-family: 'KeaniaOne';
+    src: url(../fonts/KeaniaOne-Regular.ttf);
+}
+
+body{
+    background: url("../img/background.svg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    .decorativ-list{
+        width: 820px;
+        height: auto;
+        .conteinr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            padding: 10px 0;
+            background-color: rgb(67, 64, 64);
+            header{
+                width: 100vw;
+                background-color: rgb(231, 123, 21);
+                border-radius: 0;
+                display: flex;
+                padding: 10px 10px;
+                align-items: center;
+                justify-content: space-between;
+                .back-reverse{
+                    background: none;
+                    display: none;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+                .back-reverse.show{
+                    display: block;
+                }
+                p{
+                    text-align: center;
+                    padding: 20px 0 ;
+                    font-family: 'KeaniaOne';
+                    color: white;
+                    font-size: 24px;
+                    
+                }
+                
+                @media (min-width: 425px) {
+                    justify-content: space-around;
+                }
+                @media (min-width: 800px) {
+                    width: 800px;
+                    border-radius: 10px;
+                    p{
+                        color: white;
+                        font-size: 32px;
+                    }
+                }
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                row-gap: 10px;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    row-gap: 10px;
+                    .block-credit {
+                        width: 100vi;
+                        height: 60vi;
+                        perspective: 1000px;
+                        border-radius: 10px;
+                        @media (min-width: 800px) {
+                            width: 800px;
+                            height: 470px;
+                        }
+                        .flipper{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            transform-style: preserve-3d;
+                            transition: transform 2s;
+                            .credit-card-front, .credit-card-back {
+                                border-radius: 10px;
+                                z-index: 2;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                backface-visibility: hidden;
+                                .price1, .price2, .price3, .price4  {
+                                    border-radius: 10px;
+                                    margin: 2%;
+                                    font-family: 'KeaniaOne';
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 10% 0 0 0;
+                                    height: 27.5vi;
+                                    width: 48vi;
+                                    transition: transform 0.3s;
+                                    &:hover {
+                                        transform: perspective(800px) rotateY(-10deg);
+                                        border: 3px solid rgb(2, 72, 222);
+                                    }
+                                    &:hover {
+                                        transform: perspective(800px) rotateY(10deg);
+                                    }
+                                    .price-naim{ 
+                                        font-size: 18px;
+                                        top: 3%;
+                                        right: 4%;
+                                        position: absolute;
+                                        color: white;
+                                    }
+                                    .numbers{
+                                        height: 100%;
+                                        .first {
+                                            font-size: 18vi;
+                                            -webkit-text-stroke: 1px rgb(255, 255, 255);
+                                        }
+                                        .second {
+                                            font-size: 10vi;
+                                            -webkit-text-stroke: 1px rgb(255, 255, 255);
+                                        }
+                                        .therd {
+                                            font-size: 7vi;
+                                            color: gold;
+                                            -webkit-text-stroke: 1px rgb(0, 0, 0);
+                                        }
+                                    }
+                                    @media (min-width: 800px) {
+                                        height: auto;
+                                        width: auto;
+                                        .numbers{
+                                            height: 100%;
+                                            .first {
+                                                font-size: 120px;
+                                            }
+                                            .second {
+                                                font-size: 68px;
+                                            }
+                                            .therd {
+                                                font-size: 36px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .price1{
+                                    background: url('../img/priceimg1.jpg') 0 0/cover no-repeat;
+                                }
+                                .price2{
+                                    background: url('../img/priceimg2.jpg') 0 0/cover no-repeat;
+                                }
+                                .price3{
+                                    background: url('../img/priceimg3.jpg') 0 0/cover no-repeat;
+                                }
+                                .price4{
+                                    background: url('../img/priceimg4.jpg') 0 0/cover no-repeat;
+                                }
+        
+                            }
+                            .credit-card-front{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: 1fr 1fr;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(231, 123, 21);
+                                
+                            }
+                            .credit-card-back {
+                                transform: rotateY(180deg);
+                                background-color: rgb(114, 192, 231);
+                                background: url('../img/BANKcard.svg') 0 0/cover no-repeat;
+                                .cart-form {
+                                    height: 100%;
+                                    width: 100%;
+                                    position: inherit;
+                                    #cart-number{
+                                        bottom: 30vi;
+                                        left: 4vi;
+                                        width: 70vi;
+                                    }
+                                    #data-cart{
+                                        bottom: 18vi;
+                                        left: 4vi;
+                                        width: 48vi;
+                                    }
+                                    #svc-cod{
+                                        bottom: 18vi;
+                                        left: 54vi;
+                                        width: 20vi;
+                                    }
+                                    #user-naim{
+                                        bottom: 6vi;
+                                        left: 4vi;
+                                        width: 70vi;
+                                    }
+                                    #cart-number, #data-cart, #svc-cod,  #user-naim{
+                                        position: absolute;
+                                        height: 10vi;
+                                        border-radius: 5px;
+                                        padding: 0 20px;
+                                        font-size: 4vi;
+                                    }
+                                    @media (min-width: 800px) {
+                                        #cart-number{
+                                            bottom: 250px;
+                                            left: 34px;
+                                            width: 550px;
+                                        }
+                                        #data-cart{
+                                            bottom: 150px;
+                                            left: 34px;
+                                            width: 370px;
+                                        }
+                                        #svc-cod{
+                                            bottom: 150px;
+                                            left: 420px;
+                                            width: 160px;
+                                        }
+                                        #user-naim{
+                                            bottom: 50px;
+                                            left: 34px;
+                                            width: 550px;
+                                        }
+                                        #cart-number, #data-cart, #svc-cod,  #user-naim{
+                                            height: 80px;
+                                            font-size: 34px;
+                                            border-radius: 10px;
+                                        }
+                                    }
+                                }
+                            }
+        
+                        }
+                    }
+                    .block-credit.flipped .flipper{
+                        transform: rotateY(180deg);
+                    }
+                    .next-form{
+                        width: 100vw;
+                        height: auto;
+                        padding: 10px 0;
+                        background-color: rgb(231, 123, 21);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .form-conteiner{
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            row-gap: 10px;
+                            input{
+                                width: 300px;
+                                height: 30px;
+                                border-radius: 5px;
+                                padding: 0 20px;
+                                font-size: 24px;
+                            }
+                            #submit-button{
+                                height: 60px;
+                                background-color: chartreuse;
+                                font-family: 'KeaniaOne';
+                                font-size: 32px;
+                                &:hover{
+                                    background-color: rgb(0, 255, 149);
+                                }
+                            }
+                        }
+                        @media (min-width: 800px) {
+                            width: 800px;
+                        }
+                    }
+                }
+            }
+            footer{
+                width: 100vw;
+                
+                
+                @media (min-width: 800px) {
+                    width: 800px;
+                }
+                .info-block {
+                    text-align: center;
+                    padding: 20px 0;
+                    border-bottom: 1px solid red ;
+                    border-radius: 10px 10px 0 0;
+                    background-color: rgb(231, 123, 21);
+                    p{
+                        font-family: 'KeaniaOne';
+                        font-size: 32px;
+                    }
+                }
+                .links {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 100px;
+                    background-color: rgb(23, 70, 255);
+                    border-radius: 0 0 10px 10px;
+                    a{
+                        img{
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
