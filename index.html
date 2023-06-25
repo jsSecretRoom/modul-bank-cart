@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,21 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <script src="./src/index.js" defer></script>
 </head>
+
 <body>
     <div class="decorativ-list">
         <div class="conteinr">
             <header>
+                <div class="avatar-conteiner">
+                    <img src="./src/img/avatar.jpg" alt="">
+                </div>
+            </header>
+            <div class="helper-conteiner">
                 <button class="back-reverse"><img src="./src/img/Sign_out_squre_fill.svg" alt=""></button>
                 <p class="todu-navigator">Wrap subscription type!</p>
-            </header>
+            </div>
             <main>
-                <form action="submit">
+                <form class="myform" action="submit">
                     <div class="block-credit">
                         <div class="flipper">
                             <div class="credit-card-front">
@@ -55,21 +62,20 @@
                             </div>
                             <div class="credit-card-back">
                                 <div class="cart-form">
-                                    <input type="number" name="cardNumber" id="cart-number" placeholder="cacd-number">
-                                    <input type="date" name="cardExpiry" id="data-cart" placeholder="00/00">
-                                    <input type="password" name="cardCvc" id="svc-cod" placeholder="cvc">
+                                    <input type="number" name="cardNumber" id="cart-number" placeholder="card-number">
+                                    <input type="number" name="cardExpiry" id="data-cart" placeholder="MM/YY" maxlength="4">
+                                    <input type="password" name="cardCvc" id="svc-cod" placeholder="cvc" maxlength="3">
                                     <input type="text" name="billingName" id="user-naim" placeholder="naim/serneim">
-                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="next-form">
                         <div class="form-conteiner">
-                            <input type="email" name="amail" id="1" placeholder="amail@">
-                            <input type="number" name="postcode" id="2"  placeholder="postcode">
-                            <input type="text" name="country" id="3"  placeholder="country">
-                            <input type="text" name="sity" id="4"  placeholder="sity">
+                            <input type="email" name="amail" id="user-email" placeholder="amail@">
+                            <input type="text" name="country" id="user-country" placeholder="country">
+                            <input type="text" name="sity" id="user-city" placeholder="sity">
+                            <input type="number" name="postcode" id="city-postcode" placeholder="postcode">
                             <input type="submit" value="SUBMIT" id="submit-button">
                         </div>
                     </div>
@@ -88,4 +94,5 @@
         </div>
     </div>
 </body>
+
 </html>

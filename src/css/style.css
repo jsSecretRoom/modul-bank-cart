@@ -21,43 +21,52 @@ body .decorativ-list .conteinr {
   background-color: rgb(67, 64, 64);
 }
 body .decorativ-list .conteinr header {
+  max-width: 100vw;
+  max-height: 500px;
+}
+body .decorativ-list .conteinr header .avatar-conteiner img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 800px) {
+  body .decorativ-list .conteinr header {
+    max-width: 800px;
+    max-height: 400px;
+  }
+}
+body .decorativ-list .conteinr .helper-conteiner {
   width: 100vw;
   background-color: rgb(231, 123, 21);
   border-radius: 0;
   display: flex;
   padding: 10px 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-body .decorativ-list .conteinr header .back-reverse {
+body .decorativ-list .conteinr .helper-conteiner .back-reverse {
   background: none;
   display: none;
 }
-body .decorativ-list .conteinr header .back-reverse img {
+body .decorativ-list .conteinr .helper-conteiner .back-reverse img {
   width: 40px;
   height: 40px;
 }
-body .decorativ-list .conteinr header .back-reverse.show {
+body .decorativ-list .conteinr .helper-conteiner .back-reverse.show {
   display: block;
 }
-body .decorativ-list .conteinr header p {
+body .decorativ-list .conteinr .helper-conteiner p {
   text-align: center;
   padding: 20px 0;
   font-family: "KeaniaOne";
   color: white;
   font-size: 24px;
 }
-@media (min-width: 425px) {
-  body .decorativ-list .conteinr header {
-    justify-content: space-around;
-  }
-}
 @media (min-width: 800px) {
-  body .decorativ-list .conteinr header {
+  body .decorativ-list .conteinr .helper-conteiner {
     width: 800px;
     border-radius: 10px;
   }
-  body .decorativ-list .conteinr header p {
+  body .decorativ-list .conteinr .helper-conteiner p {
     color: white;
     font-size: 32px;
   }
@@ -199,20 +208,32 @@ body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-bac
   left: 4vi;
   width: 70vi;
 }
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number.error {
+  background-color: rgba(255, 53, 53, 0.576);
+}
 body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart {
   bottom: 18vi;
   left: 4vi;
   width: 48vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart.error {
+  background-color: rgba(255, 53, 53, 0.576);
 }
 body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod {
   bottom: 18vi;
   left: 54vi;
   width: 20vi;
 }
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod.error {
+  background-color: rgba(255, 53, 53, 0.576);
+}
 body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
   bottom: 6vi;
   left: 4vi;
   width: 70vi;
+}
+body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim.error {
+  background-color: rgba(255, 53, 53, 0.576);
 }
 body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #cart-number, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #data-cart, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #svc-cod, body .decorativ-list .conteinr main form .block-credit .flipper .credit-card-back .cart-form #user-naim {
   position: absolute;
@@ -316,5 +337,5 @@ body .decorativ-list .conteinr footer .links {
   border-radius: 0 0 10px 10px;
 }
 body .decorativ-list .conteinr footer .links a img {
-  height: 60px;
+  height: 45px;
 }
